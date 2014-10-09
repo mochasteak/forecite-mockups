@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ForeCite - Citation suggestion service</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!-- Loading Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="dist/css/vendor/bootstrap.min.css">
+        <!-- Loading Flat UI -->
+        <link href="dist/css/flat-ui.css" rel="stylesheet">
+
+
+        <link href='https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_64,w_64/fvohvfvl1snbqqzxcknm.png">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+        <!--[if lt IE 9]>
+        <script src="dist/js/vendor/html5shiv.js"></script>
+        <script src="dist/js/vendor/respond.min.js"></script>
+        <![endif]-->
+        <script src="dist/js/vendor/jquery.min.js"></script>
+        <script src="dist/js/bootstrap.min.js"></script>
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-55231321-1']);
+            _gaq.push(["_setDomainName", "none"]);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid col-md-12">
+            <header class="header">
+                <a href="/"><img alt="ForeCite Logo" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/d8j9oiuf6r2j5sltanza.png" class="minuslmM" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/d8j9oiuf6r2j5sltanza.png" title="ForeCite"></a>
+            </header>
+            <div class="col-md-6 col-md-push-3">
+                <header>
+    <img alt="" src="http://assets.strikingly.com/static/icons/flat-modern/19.png" class="img-responsive center-block" data-original="http://assets.strikingly.com/static/icons/flat-modern/19.png" title="" style="position: relative; vertical-align: middle;">
+</header>
+
+<hr>
+<h1 class="text-center">Demo ahead</h1>
+<p>We are currently looking for feedback on ForeCite from authors, reviewers and editors of scientific publications. We would really appreciate it if you could take a few minutes to just play around with the interface that we have created and, when you feel you 'get it', please take a short survey to let us know what you think.</p>
+<p>The whole exercise should not take more than 10-15 minutes of your time and would really help us understand if we should quit our day jobs and spend our life savings building ForeCite, or stick to working for the man.</p>
+<div class="text-center">
+    <a href="demo.html" class="btn btn-primary btn-wide">Let's do it</a>
+</div>
+<hr>
+            </div>
+        </div>
+
+
+        <div class="banner">
+            <p>Please take our short survey for your <a href="https://www.surveymonkey.com/s/9J7LXH2">chance to win a $100/£60 Amazon gift card</a></p>
+        </div>
+
+        <script src="dist/js/flat-ui.min.js"></script>
+        <script src="dist/js/scrollplugin.js"></script>
+        <script src="dist/js/forecite.js"></script>
+
+        <script>
+            $('.change').click(function(){
+                $('.modal').modal();
+                $('form').find('.titleToSearch').val('');
+                $('form').find('.textToSearch').val('');
+            });
+            $('.suggest').modal();
+            $('.suggest li').click(function(){
+                var title;
+                var text;
+                var url;
+                $('.modal').modal('hide');
+
+                if($(this).index() === 0){
+
+                    $(this).find(':checkbox').attr('checked', false);
+                    //console.log($(this).find(':checkbox'));
+                    // console.log('example1');
+                    title = $(this).find('.title').text();
+                    text = $(this).find('.text').text();
+                    url = 'example1.html';
+                }
+                if($(this).index() === 1){
+                    $(this).find(':checkbox').attr('checked', false);
+                    //console.log('example2');
+                    title = $(this).find('.title').text();
+                    text = $(this).find('.text').text();
+                    url = 'example2.html';
+                }
+                if($(this).index() === 2){
+                    $(this).find(':checkbox').attr('checked', false);
+                    //console.log('example3');
+                    title = $(this).find('.title').text();
+                    text = $(this).find('.text').text();
+                    url = 'example3.html';
+                }
+                $('form').find('.titleToSearch').val(title);
+                $('form').find('.textToSearch').val(text);
+                $('.btn-primary').attr('href',url);
+            })
+
+            $('.export').click(function(){
+               console.log('not ready yet!');
+            });
+        </script>
+
+    </body>
+</html>

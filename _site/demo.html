@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ForeCite - Citation suggestion service</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!-- Loading Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="dist/css/vendor/bootstrap.min.css">
+        <!-- Loading Flat UI -->
+        <link href="dist/css/flat-ui.css" rel="stylesheet">
+
+
+        <link href='https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_64,w_64/fvohvfvl1snbqqzxcknm.png">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+        <!--[if lt IE 9]>
+        <script src="dist/js/vendor/html5shiv.js"></script>
+        <script src="dist/js/vendor/respond.min.js"></script>
+        <![endif]-->
+        <script src="dist/js/vendor/jquery.min.js"></script>
+        <script src="dist/js/bootstrap.min.js"></script>
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-55231321-1']);
+            _gaq.push(["_setDomainName", "none"]);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid col-md-12">
+            <header class="header">
+                <a href="/"><img alt="ForeCite Logo" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/d8j9oiuf6r2j5sltanza.png" class="minuslmM" data-original="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_540,w_720/d8j9oiuf6r2j5sltanza.png" title="ForeCite"></a>
+            </header>
+            <div class="col-md-10 col-md-push-1">
+                <form class="mtxl form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-1 control-label">Title</label>
+        <div class="col-sm-11">
+            <textarea class="form-control titleToSearch"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label">Text</label>
+        <div class="col-sm-11">
+            <textarea class="form-control textToSearch" rows="16"></textarea>
+        </div>
+    </div>
+</form>
+<div class="text-center">
+    <a href="#" class="btn btn-primary btn-wide">Get suggestions</a>
+    <a href="#" class="btn btn-link change">Change search</a>
+</div>
+
+
+<div class="modal fade suggest">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Upload your text</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Here you would be able to upload a title and some text for us to perform our magic on.
+                    Right now though we're asking you to use one of our three example documents to get started
+                </p>
+
+                <div class="tile col-md-12">
+                    <ul class="list-unstyled  text-left">
+                        <li class="mbm col-md-12 example">
+                            <span class="fui-document pull-left"></span>
+                            <input id="example1" type="checkbox" name="example1" value="example1" />
+                            <label for="example1" class="title">Analytical methods for PCB's and organochlorine pesticides in environmental montioring and surveillance: a critical appraisal</label>
+                            <span class="text" style="display: none">Introduction
+
+Scope of the review
+
+Polychlorinated biphenyls (PCBs) and organochlorine pesticides (OCPs; aldrin, chlordane, DDT, dieldrin, endrin, heptachlor, mirex, toxaphene, hexachlorobenzene (HCB)) constitute ten of the twelve chemical substances/groups currently defined under the Stockholm Convention on Persistent Organic Pollutants (POPs). While bans and phase-outs of these chemicals occurred during the 1970s and 1980s in most developed countries, they were not in place in many developing countries. Article 7 of the Stockholm Convention requires National Implementation Plans (NIPs) to be developed by signatory countries. For countries where PCBs and OCPs are still in use or loosely regulated, the NIPs will eventually lead to the phase-out of OCPs for agricultural use and reduced use for disease vector control. However, many countries will be faced with the legacy of past use of these persistent chemicals. Residues in soils, sediments and biota will pose a risk for wildlife and human consumers. The problems of destroying existing stockpiles, especially of OCPs and PCBs in electrical equipment, as well as preventing migration of contaminants from storage areas, will need to be solved. There is a need to monitor levels and trends now and into the future in order to assess compliance with the POPs Convention within each country as well as on a regional and global basis.
+
+This review will also mainly focus on methodology for the analysis of PCB/OCPs in biological samples (fish, aquatic and terrestrial mammals and birds) as well as soils, sediment and passive samplers such as semipermeable membrane devices (SPMDs). These matrices and environmental compartments have higher concentrations of PCBs and most OCPs than water or air, making them more suitable for routine monitoring and more relevant in the context of exposure of humans and wildlife. Milk and blood are important matrices for POPs monitoring in humans and, in the case of blood, are increasingly used in programs involving live-captured marine mammals and birds. Thus analytical methods for milk and blood are briefly considered here. The advantages and disadvantages of various bioindicator species are discussed in detail.
+
+Substances to be analyzed
+
+PCBs (except non-ortho-substituted congeners; no-PCB) and OCPs can be considered together because they are extracted and analyzed together in most cases, as discussed below. In practice, most laboratories determine about 30 or more individual PCB congeners, and 10–20 individual OCPs and their metabolites, regardless of the sample matrix. Ongoing POPs monitoring programs vary in their analyte lists. For example, the Integrated Atmospheric Deposition Network (IADN) in the Great Lakes region of North America includes over 100 PCB congeners , while the UNEP/World Bank/GEF project on Persistent Organic Pollutants, Food Security, and Indigenous Peoples in Arctic Russia included 15 PCB congeners. The Arctic Monitoring and Assessment Program recommended 30 ortho-substituted PCBs.
+
+The UNEP Global POPs monitoring workshop categorized individual PCB/OCPs as “essential” and “recommended,” taking into consideration the need for various levels of analytical capacity building in developing countries in order to conduct the monitoring. For PCBs, a minimum of seven PCBs (28/31, 52, 101/90, 118, 138, 153 and 180) were regarded as essential for routine monitoring of fish and food products around the world. Using only seven congeners severely underestimates total PCB concentrations in some matrices—particularly in abiotic samples such as air, soil, and sediment. On the other hand, these seven are robustly determined, having been the subject of numerous interlab comparisons (e.g., QUASIMEME) . UNEP recommended a suite of 30 ortho-substituted congeners for more comprehensive monitoring.
+
+Toxaphene and chlordane are multicomponent mixtures and analytical standards are available for some, but not all, major components, which makes them the most difficult to analyze among the eight OCPs on the POPs list. Current programs in Europe are determining three toxaphene congeners, Parlar (P) 26, 50 and 62, and interlaboratory comparisons have shown reasonable agreement for these congeners among laboratories . However, P26 is interfered with by coeluting chlorobornanes in some matrices, and P62 can vary widely in its instrumental response. Furthermore, in North America, most datasets for toxaphene are still based on quantification with technical toxaphene, which yields a single value and no congener-specific information. Capacity for determining toxaphene outside of the USA, Canada and western Europe is very limited judging from the relatively large number of measurements from these countries and the dearth of measurements elsewhere
+
+The situation for chlordane is better because analytical standards are available for the major components (cis- and trans-chlordane; cis- and trans-nonachlor, heptachlor). Nevertheless, keith9-11" class="citation"> other octachloro- and nonachlorochlordane components are important and are often found in top predators, and analysts need to be aware of possible interferences from these compounds in seabird and marine mammal extracts.
+
+The chlorinated insecticides endosulfan, lindane and methoxychlor are also candidates for inclusion in analytical methods where impacts of OCPs are being investigated. Global use of these insecticides, particularly endosulfan, is very significant. These current-use pesticides can generally be isolated and quantified along with other OCPs.
+
+The no-PCBs need to be considered separately because their analytical methodology is normally quite different from that used for ortho-substituted PCBs and OCPs.
+
+In summary, the minimum number of PCB/OCPs to be considered will vary with the objectives of a given study. A long list of analytes would be used for initial surveys where no information was available. Chemical structures and physical and chemical properties of selected PCBs and OCPs are listed in the appendix.
+
+Analytical standards
+
+The availability of accurate analytical standards is a fundamental requirement of an analytical program designed to quantify PCB/OCPs. Standards are available from commercial chemical supply companies as well as from agencies involved in certification of reference materials, e.g., the National Institute of Standards and Technology (NIST) or from the Bureau Communautaire de Référence (BCR) via the Sigma-Aldrich company. Interlaboratory studies have shown that incorrect analytical standards and calibration errors can be a major source of error in POPs analysis . These authors recommended that multilevel calibration at 4–6 levels should be used to define the response profile, that calibration solutions should be checked against independent solutions, either from another reliable laboratory or by preparing duplicate solutions, and that calibrants should be ampouled (in sealed glass vials) for long-term storage. They noted that refrigerator storage can loosen the caps on screw-top vials. Thus, storage of calibrant solutions in this manner should only be temporary.
+
+Quantification of PCBs can be carried out using two approaches; by mixture or individual congener standard. The former method employs a standard that was available as a commercial product (e.g., Aroclor 1254 used in transformer oils) to quantitate the congeners contained in the Aroclor mixture against those matching in the sample. There are several mixtures available, with varying degrees of mean chlorination. Percent ratios of the congeners in various commercial mixtures have been reported. The limitation of this method is the varying congener ratios within a given commercial mixture due to batch-to-batch production variability which, in turn, may lead to congener calculation error . Also, a significant bias resulting in an overestimation of PCB measurements may occur if the PCB pattern in the sample does not match that of the standards. It has been suggested that accurate PCB determinations can be made if the chromatographic pattern of both the standards and the samples are similar. However, if the pattern differs, the study reported a bias doubling the values determined by the individual congener standard. The method of choice is congener determination using standard mixtures comprising composite individual congeners added at known quantities which were purchased individually. This provides an improved and known level of accuracy not possible with the commercial PCB mixture approach.
+
+Commonly used analytical methods for PCB/OCP monitoring and surveillance
+
+Overview
+
+Not all of these sources provide analytical SOPs for all environmental media. Alternatively, numerous books are available that summarize methods. For example, others summarized US EPA methods for PCBs and OCP in sediment and biological materials. Others, have reviewed and recommended methods for the separation, isolation and recoveries of OCPs and PCBs from soils, sediment and biological matrices. There is also a useful overview of current analytical methodology for OCP/PCBs.
+
+The UNEP POPs workshop on global monitoring (UNEP 2003) noted that, given the broad range of technical expertise for analysis of PCBs and OCPs, as evident from the extensive international participation in interlaboratory calibration projects for these compounds, no single, detailed, step-by-step analytical method can be recommended. Instead laboratories would use methods best-suited to their situation and take part in international interlaboratory comparisons to verify their work. This performance-based approach has also been adopted by the US EPA in an effort to introduce flexibility in conducting environmental monitoring. This approach also encourages analytical innovation by allowing the use of new and alternate methods, provided that predetermined performance criteria are met.
+
+Sampling
+
+Acquisition of suitably representative samples is fundamental to any environmental measurement program and should not be overlooked. Contamination during field collection can occur, particularly from PCBs in electrical equipment and building products (e.g., marine paints, joint sealants), or due to the ongoing use of OCPs. “Clean” techniques need to be adopted, such as the use of special clothing and disposable gloves for sampling, sealed shipping containers, and field blanks. ICES, NOAA and OSPAR provide useful guidelines for sampling of fish/crustaceans, mussels, and sediment, respectively. There is also a detailed overview of sampling methods for lakes and river sediments.
+
+Sample containers should be supplied by the laboratory and checked for contamination. Appropriate sample containers for biological tissue that is to be analyzed for POPs are glass jars or glass vials with screw caps. Screw caps should be lined with solvent-rinsed aluminum foil or Teflon cap inserts. Clear polyethylene bags, and polypropylene jars, are also appropriate for temporary storage but may not be suitable for long-term storage because of the possibility of migration of plasticizers (such as phthalates) into the tissue, especially for samples with high lipid contents. Freezing and storage of multiple small samples suitable for analysis, rather than larger masses, is recommended to avoid multiple freezing and thawing of tissue and to reduce sample handling, which in turn reduces the potential for contamination. Samples can be wrapped in aluminum foil and then inserted into plastic bags.
+
+Blood samples should be collected in ethylenediamine tetraacetic acid (EDTA) vials or vacutainers, centrifuged, and the plasma transferred to vials washed with hexane. Field blanks, consisting of sample containers taken to the lab and returned with other samples, should be included.
+
+Air sampling for POPs is normally conducted using polyurethane foam (PUF) or XAD resin . From 300 to 10,000 m3 of air are passed through the sampling medium. Sampling media are then transferred to clean, wide-mouthed glass jars, sealed and stored at 4 °C prior to extraction. Some sampling cartridges can be sealed and transported and the sampling media transferred to Soxhlet or pressurized liquid extraction systems in a clean laboratory environment.</span>
+                        </li>
+                        <li class="mbm col-md-12 example">
+                            <span class="fui-document pull-left"></span>
+                            <input id="example2" type="checkbox" name="example2" value="example2" />
+                            <label for="example2" class="title">Relationships between computer extracted mammographic texture pattern features and BRCA1/2 mutation status: a cross-sectional study</label>
+                            <span class="text" style="display: none">The success of extracting a graphene sheet from a graphite crystal a few years ago has triggered enormous interest in exploring the unique physics and novel applications. However, to be able to study the intrinsic properties of graphene or make an electronic device, the single atomic sheet is often required to sit or be grown on a semiconductor or metallic substrate. The interaction between the graphene and substrate almost inevitably perturbs the intrinsic property of pristine graphene, for instance, leading to bandgap opening in the otherwise zero bandgap graphene. Bandgap opening might be convenient for the electronic application such as making transistors; it nevertheless destroys perhaps the most unique aspect of graphene—the cone-shape electronic structure at the Dirac or K point of the two-dimensional (2D) Brillion zone (BZ) of graphene. It has recently been shown that in potassium intercalated graphite, KC8, the electronic structure of graphene near the Dirac point can be largely preserved, except for a 1.35 eV upward shift in Fermi level (E F) from that at the touching point of the conduction and valence band in graphene, as a result of charge transfer from potassium to graphene layers. Potassium is a well-known donor that is often used along with other alkali metals for intercalated graphite compounds (IGCs) for the purpose of improving the in-plane conductivity of graphite. IGCs are also targeted as battery, electrode and catalytic materials, carbon fibers, etc. However, despite four decades effort, none of them has yet made substantial impact because these IGCs are not sufficiently uniform and robust in meeting more rigid standards for electronic device applications. Another major issue that has hindered the practical application and even the basic research of the intercalated graphite is their poor stability. Therefore, there is a vital need to form a graphene-based “superstructure” to provide mechanical robustness and chemical stability.
+
+Superlattice, proposed by Esaki and Tsu in 1970, has been a major force in providing man-made solids with unique properties that are not readily available in nature, such as Bloch oscillation at THz frequency, negative differential conductance for amplifier, quantum cascade lasers, IR detectors. It is not generally known that another major motivation that drove Esaki and Tsu to man-made superlattices was to increase the size of the basic unit, such as a double barrier resonant tunneling structure, so that real devices may be constructed and controlled from the standpoint of optimum size and power handling. A periodic structure is basically the best option that we know to mimic a large solid. The concept of the superlattice has been extended far beyond the originally proposed systems, from the extreme of monolayer superlattices, in terms of the layer thickness to another extreme, the inorganic-organic hybrid superlattices representing a drastically different chemical bonding. The Graphene/Silicon(Gr/Si) superlattice to be explored in this work represents an example of a superlattice structure with uniqueness in both layer thickness and chemical bonding. Intercalation is not an efficient and sufficiently precise method for making the proposed superlattice. We propose instead using molecular beam epitaxy (MBE) to assemble the periodic structure layer by layer. An added reason to explore the possibility of binding the graphene sheets together with Si is obviously because Si is the backbone of the current electronic technology.
+
+Two primary discoveries of the present investigation are (1) Gr/Si superlattice exhibits significantly stronger interlayer bonding than graphite, and (2) the electronic band structure near the graphene K point is practically unperturbed by the Si layer, but with significant electron transfer from the Si layer into the graphene layer.
+
+We apply a first-principles density functional theory (DFT), within the local density approximation (LDA), to study the structural and electronic properties of the proposed Gr/Si superlattice, and the 2D Si structure as the second component of the superlattice. The DFT-LDA level theory has been well documented to be quite adequate for describing the structural properties of graphite near its equilibrium configuration, and capable of offering basic understanding for its electronic band structure (subjecting to the well-known LDA error in the bandgap), although higher-order theories (e.g., GW) are needed for quantitative analyses of experimental data involving many-body effects. A plane-wave pseudopotential code, PEtot, is used. A kinetic energy cutoff of 60 Ry is used in conjunction with norm-conserving pseudopotentials. For the structural calculation, BZ sampling is performed using 16 × 16 × 10 k-point grids for the 3D structures (Gr/Si and graphite crystals) and 16 × 16 × 1 for the 2D structures (graphene and Si sheets). For the 3D structure, equilibrium in-plane and out-of-plane lattice constants, a and c, are determined by searching for the local minimum of the total energy E tot(a,c). For the 2D structure, a is obtained by minimizing E tot(a), using a periodic structure with a vacuum space of 15 Å for graphene and 20 Å for Si. With the obtained lattice parameters, 50 × 50 × 10 or 50 × 50 × 1 k-point grids are then used for the band structure calculations, resulting in more accurate Fermi energies (typically converging to within a few meV).
+
+The first question to ask: what would be the Si structure that best matches the graphene structure? Graphitic Si, a silicon equivalent of AB graphite, has a theoretical in-plane lattice constant a = 4.07 Å, which corresponds to a bond length of 2.35 Å, the same as that of the diamond structure. Given the fact that the graphene lattice constant a is only 2.46 Å, the lattice mismatch is huge (65%) between a graphene-like Si and graphene. However, a 30o-rotated structure (√3x√3R30) could in principle yield a closely lattice-matched superlattice, but with lower symmetry. The primary interest of this work is the next higher symmetry structure. We notice that the center-to-center separation of the hexagons in graphene is quite close to the Si bond length (4.5% difference). Therefore, Si should sit well at the hollow site of graphene, as in the cases of many IGCs, forming a 2D equilateral triangular lattice. The chemical formula for such a superlattice will be SiC2. As a matter of fact, SiC2 molecules are known to exist for many decades in multiple isomers with a cyclic form to be the energetically most stable. What we have proposed is simply an ordered ensemble of SiC2 molecules. The superlattice could also simply be viewed as another form of Silicon Carbide. We find that the triangular Si layer itself is indeed a metastable state with E tot = −107.0 eV/atom (0.917 eV/atom higher than that in the diamond phase) and a Si = 2.4271 Å. The lattice constant of this 2D lattice turns out to be closer to that of the graphene than those of the other two forms of Si, providing the rationale for an in-depth study of the Gr/Si superlattice.
+
+Structural Properties
+
+For the AB graphite, our calculation yields a AB = 2.4395 Å and c AB = 6.6589 Å, agreeing very well with the extrapolated 0 K experimental results: 2.4589 Å and 6.6720 Å (deviations of only −0.77 and −0.19%). The lattice constant of graphene, a Gr = 2.43935 Å, is slightly smaller than that of AB graphite, which could be understood by visualizing that one of the C atoms in the B layer sits above the hollow site of the A layer, causing a small expansion of the C ring in the A layer. For the AA graphite, a AA = 2.43927 Å is practically the same as that of graphene, but the separation of the graphene sheets is 8.4% larger than that of the AB graphite or c AA = 3.6105Å (similar to a previous report), indicating weaker interlayer coupling for the AA stacking. The lattice mismatch between graphene and the Si sheet is only 0.5%, and the formation of the Gr/Si superlattice yields an in-plane lattice constant a Gr/Si = 2.4363 Å in between a Si and a Gr, forming an ideal strained-layer superlattice, with c Gr/Si = 7.2662 Å. The C-Si layer separation is only slightly larger than c AA (by 0.63%), given the fact that Si is substantially larger than C. Figure 1 shows the atomic structure of the superlattice, viewed along the c axis, overlaid with the ground state total charge density. It shows more charge on the graphene plane than in the Si plane, because of the C/Si ratio = 2 and more extended charge distribution along the c axis for Si.
+
+The interlayer binding energy of the graphite and superlattice is defined as E b = (E tot − Σi E tot,i)/N, where E tot is the total energy for the final system, E tot,i is for the individual layer, and N is the total number of atoms per unit cell. For the AB graphite, the LDA calculations seem converging to E b ≈ 20–25 meV/atom, whereas the experimental results are in the range of 23–52 meV/atom . Our results are 24.4 and 15.0 meV/atom, respectively, for the AB and AA graphite. We find a significant enhancement in the interlayer binding for the Gr/Si superlattice, being E b = 35.1 meV/atom. It is interesting to note that the hypothetic graphitic Si has a substantially stronger interlayer binding (175 meV/atom) than that of graphite. It has been pointed out that the LDA calculation might underestimate the binding energy, and the improved value with the many-body effect included becomes 56 meV/atom for the AB graphite. Therefore, the actual binding strength of the Gr/Si superlattice may be somewhat stronger than our current LDA result. We note that the √3x√3R30-based superlattice would have a somewhat smaller interlayer binding energy (32.8 meV/atom).
+
+Electronic Properties
+
+We first produce the electronic structure of graphene and the Si layer, using a Gr/Si. The result for graphene is shown in Fig. (a), which resembles the results of previous DFT-LDA calculations: a zero bandgap semiconductor with linear dispersions near K point. The in-plane binding for the triangular Si sheet is somewhat different from that of graphene: Si is sixfold coordinated, instead of threefold for C in graphene. If assuming the in-plane binding remains as sp2, then there would be only one electron/bond, implying a metallic behavior. With this assumption, the pz orbit would also be half-occupied. One possibility for it to be a semiconductor is to have two electrons going to the s-like band and the other two to the pz-like band. Fig. 2(b) shows the actual calculated band structure. It turns out that the band structure is semiconductor-like in the k-space surrounding the Γ point. However, toward the zone boundary, the band structure becomes metallic, and thus the Si sheet is a semi-metal. At the Γ point, the lowest state is s-like, and the second state is pz-like, but the third is a mixture of all the three p states, leading to our labeling them as s-like and p-like.
+
+Shown in Fig. 3 is the band structure of the Gr/Si superlattice. There are a few important findings: (1) the dispersion curves can be divided into two groups, respectively, from the graphene and Si sheet, indicating that the coupling is relatively weak; (2) the dispersions of the graphene-like bands near the K point retain the same type of linear dispersion as in the graphene, because it is a property dictated by the symmetry rather than the strength of the coupling; (3) E F moves to 234 meV above the Dirac point of graphene, indicating that electrons are transferred from Si to graphene, which is also corroborated by the downward shift of E F with respect to the Si derived states in the vicinity of E F. We may say approximately the band structures of the two materials move rigidly against each other as a whole. The relative shift is a result of leveling E F for the whole system as a combined effect of work function difference and the interface dipole formation, similar to what happens in the metal-semiconductor as well as metal-graphene interface. There are, however, internal changes within each group: for instance, the separation at the Γ point between the lowest and the second lowest band decreases by 0.245 eV for the graphene group. Along the direction of the c axis, the dispersion of the highest valence band is 69 meV between K and H, slightly larger than the 38 meV in the AB graphite. A significant difference lies in that in the graphite the highest valence band provides the electron conductivity near the K point and hole conductivity near the H point, whereas in the Gr/Si superlattice, the valence band states are fully occupied throughout the K-H line of BZ. Therefore, the only conducting carrier type in the graphene sheet is electron, due to the electron pocket occupying the π* band states close to the K point. The number of the electron transferred into graphene is estimated to be 4 × 10−3e/Si, much less than 0.8e/K in KC8. However, the number of conducting electrons, occupying the states approximately within kT from E F, are actually about the same for SiC2 and KC8, despite Si being isovalent to C. Note that the number of electrons in the graphene layer can be further modified by an external electric field applied along the superlattice stacking direction, which is a ready-made structure for a field-effect transistor (FET) or a stack of FETs if employing the similar scheme of forming a quantum cascade laser using a superlattice. Also, there are plenty of other possible replacements for the Si sheet to offer diverse novel properties of graphene/X superlattices, X may include such as BN, SiO2, P, and even organic molecules.
+</span>
+                        </li>
+                        <!--<li class="mbm col-md-12 example">-->
+                            <!--<span class="fui-document pull-left"></span>-->
+                            <!--<input id="example3" type="checkbox" name="example3" value="example3" />-->
+                            <!--<label for="example3" class="title">Binding Graphene sheets together using silicone: Graphene/Silicone superlattice</label>-->
+                            <!--<span class="text" style="display: none">Example 3: Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here Loads of snippet text here</span>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+            </div>
+        </div>
+
+
+        <div class="banner">
+            <p>Please take our short survey for your <a href="https://www.surveymonkey.com/s/9J7LXH2">chance to win a $100/£60 Amazon gift card</a></p>
+        </div>
+
+        <script src="dist/js/flat-ui.min.js"></script>
+        <script src="dist/js/scrollplugin.js"></script>
+        <script src="dist/js/forecite.js"></script>
+
+        <script>
+            $('.change').click(function(){
+                $('.modal').modal();
+                $('form').find('.titleToSearch').val('');
+                $('form').find('.textToSearch').val('');
+            });
+            $('.suggest').modal();
+            $('.suggest li').click(function(){
+                var title;
+                var text;
+                var url;
+                $('.modal').modal('hide');
+
+                if($(this).index() === 0){
+
+                    $(this).find(':checkbox').attr('checked', false);
+                    //console.log($(this).find(':checkbox'));
+                    // console.log('example1');
+                    title = $(this).find('.title').text();
+                    text = $(this).find('.text').text();
+                    url = 'example1.html';
+                }
+                if($(this).index() === 1){
+                    $(this).find(':checkbox').attr('checked', false);
+                    //console.log('example2');
+                    title = $(this).find('.title').text();
+                    text = $(this).find('.text').text();
+                    url = 'example2.html';
+                }
+                if($(this).index() === 2){
+                    $(this).find(':checkbox').attr('checked', false);
+                    //console.log('example3');
+                    title = $(this).find('.title').text();
+                    text = $(this).find('.text').text();
+                    url = 'example3.html';
+                }
+                $('form').find('.titleToSearch').val(title);
+                $('form').find('.textToSearch').val(text);
+                $('.btn-primary').attr('href',url);
+            })
+
+            $('.export').click(function(){
+               console.log('not ready yet!');
+            });
+        </script>
+
+    </body>
+</html>
