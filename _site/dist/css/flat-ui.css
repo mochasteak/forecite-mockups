@@ -5762,6 +5762,7 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
   font-size: 18px;
   display: inline-block;
   line-height: 1.6;
+  font-style: normal;
 }
 .citing_article:hover {
   border-left: 4px solid #ff6622;
@@ -5795,7 +5796,7 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
 .number_of_cites,
 .author,
 .pub_year {
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   font-size: 13px;
 }
